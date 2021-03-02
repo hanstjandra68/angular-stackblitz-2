@@ -1,9 +1,17 @@
-<hello name="Tugas 2"></hello>
+<h1>Tugas 2</h1>
 <p>
 	Halaman 1 Gan!
 </p>
-<span>Judul: </span><input [(ngModel)]="textjudul" type="text">
 
+<span>Judul: </span><input [(ngModel)]="textjudul" type="text">
+<br>
+<span>Isi: </span><input [(ngModel)]="textisi" type="text">
+<br>
+<span>Tanggal: </span><input [(ngModel)]="tanggal" type="date">
+<br>
+<button (click)="tambahdata()">Tambah data</button>
 
 <a routerLink="/hal2">Spawn Halaman 2</a>
+
+<router-outlet></router-outlet>
 <br>
