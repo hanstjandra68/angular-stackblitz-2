@@ -1,5 +1,6 @@
 import { Component, VERSION } from "@angular/core";
 import { Router } from "@angular/router";
+import { Data } from "../data.model";
 import { GlobalvarService } from "../globalvar.service";
 
 @Component({
@@ -8,7 +9,11 @@ import { GlobalvarService } from "../globalvar.service";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  constructor(private router: Router, public globalVar: GlobalvarService) {}
+  semuaData: Data[];
+  tempData: Data;
+  constructor(private router: Router, public globalVar: GlobalvarService) {
+    this.semuaData = this.globalVar.allData;
+  }
 
   textjudul = "";
   textisi = "";
@@ -16,7 +21,13 @@ export class AppComponent {
 
   name = "Angular " + VERSION.major;
 
-  openhal2() {
-    this.router.navigate(["/hal2"]);
+  tambahdata() {
+    this.tempData = {
+      judul: this.textjudul,
+      isi: this.textisi,
+      tanggal: this.tanggal.toString()
+    };
+    this.globalVar.saveData(this.tempData);
+    console.log("berhasil");
   }
 }

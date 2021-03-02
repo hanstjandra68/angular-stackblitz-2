@@ -1,7 +1,15 @@
 import { Injectable } from "@angular/core";
+import { Data } from "./data.model";
 
 @Injectable()
 export class GlobalvarService {
-  private someArray: Array<{ judul: string; isi: string; tanggal: Date }> = [];
+  allData: Data[] = [];
   constructor() {}
+
+  public initdata(data: Data[]) {
+    this.allData = data;
+  }
+  saveData(note: Data) {
+    this.allData.push(note);
+  }
 }
