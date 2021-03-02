@@ -3,7 +3,15 @@ import { Data } from "./data.model";
 
 @Injectable()
 export class GlobalvarService {
-  allData: Data[] = [];
+  allData: Data[] = [
+    {
+      judul: "andaikan",
+      isi: "aku bersinar",
+      tanggal: "19-12-2000",
+      status: "favorite",
+      index: 0
+    }
+  ];
   constructor() {}
 
   public initdata(data: Data[]) {

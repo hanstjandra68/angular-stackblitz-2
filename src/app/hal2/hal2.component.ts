@@ -19,7 +19,7 @@ export class Hal2Component implements OnInit {
     this.semuaData = this.globalVar.allData;
   }
 
-  favorite() {
-    this.globalVar.editStatus();
+  favorite(index: number) {
+    this.globalVar.editStatus(index);
   }
 }
