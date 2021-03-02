@@ -3,8 +3,8 @@
 </p>
 
 <div *ngFor="let data of semuaData">
-	<h2>{{data.judul}}</h2>
-	<h4>{{data.isi}}</h4>
-	<h5>{{data.tanggal}}</h5>
-	<button>favorit</button>
+	<p>Judul: {{data.judul}}</p>
+	<p>Isi: {{data.isi}}</p>
+	<p>Tanggal: {{data.tanggal}}</p>
+	<button (click)="favorite()">favorit</button>
 </div>

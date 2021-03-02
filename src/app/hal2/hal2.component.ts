@@ -18,4 +18,6 @@ export class Hal2Component implements OnInit {
   ngOnInit() {
     this.semuaData = this.globalVar.allData;
   }
+
+  favorite() {}
 }
