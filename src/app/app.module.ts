@@ -9,7 +9,10 @@ import { Hal3Component } from "./hal3/hal3.component";
 import { RouterModule, Routes } from "@angular/router";
 import { GlobalvarService } from "../globalvar.service";
 
-const ROUTES: Routes = [{ path: "hal2", component: Hal2Component }];
+const ROUTES: Routes = [
+  { path: "hal2", component: Hal2Component },
+  { path: "hal3", component: Hal3Component }
+];
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],

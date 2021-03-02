@@ -12,4 +12,7 @@ export class GlobalvarService {
   saveData(note: Data) {
     this.allData.push(note);
   }
+  editStatus(index: number) {
+    this.allData[index].status = "favorite";
+  }
 }

@@ -26,7 +26,8 @@ export class AppComponent {
       judul: this.textjudul,
       isi: this.textisi,
       tanggal: this.tanggal.toString(),
-      status: "tidak favorite"
+      status: "tidak favorite",
+      index: this.semuaData.length
     };
     this.globalVar.saveData(this.tempData);
     console.log("berhasil");
