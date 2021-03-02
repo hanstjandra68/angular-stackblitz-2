@@ -15,4 +15,7 @@ export class GlobalvarService {
   editStatus(index: number) {
     this.allData[index].status = "favorite";
   }
+  getStatus(index: number) {
+    return this.allData[index].status;
+  }
 }

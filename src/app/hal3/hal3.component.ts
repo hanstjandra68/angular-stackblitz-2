@@ -11,10 +11,10 @@ import { GlobalvarService } from "../../globalvar.service";
 export class Hal3Component implements OnInit {
   semuaData: Data[];
   tempData: Data;
-  status_ok = "favorite"
+  status_ok = "favorite";
   constructor(private router: Router, public globalVar: GlobalvarService) {
     for (let i = 0; i < this.globalVar.allData.length - 1; i++) {
-      if (this.globalVar.allData[i].status == this.status_ok) {
+      if (this.globalVar.getStatus(i) == this.status_ok) {
         this.semuaData.push(this.globalVar.allData[i]);
       }
     }
