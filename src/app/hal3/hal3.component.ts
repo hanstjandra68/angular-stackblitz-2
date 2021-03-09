@@ -30,7 +30,7 @@ export class Hal3Component implements OnInit {
   }
 
   ngOnInit() {
-        this.semuaData.length = 0;
+    this.semuaData.length = 0;
 
     for (let i = 0; i < this.globalVar.allData.length - 1; i++) {
       if (this.globalVar.allData[i].status == this.status_ok) {
